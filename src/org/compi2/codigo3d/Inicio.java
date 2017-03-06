@@ -1,6 +1,7 @@
 package org.compi2.codigo3d;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.StringReader;
 import org.compi2.codigo3d.parser.ControlC3D;
 import org.compi2.codigo3d.parser.parser;
@@ -71,6 +72,7 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_GenerarC3DActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_GenerarC3DActionPerformed
+       
         String texto = jTextField_Expresion.getText();
         if(texto.isEmpty()){
             System.err.println("No es posible evaluar una cadena en blanco.");

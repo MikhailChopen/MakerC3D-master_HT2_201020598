@@ -23,6 +23,15 @@ MENOS		= "-"
 MULT       	= "*"
 DIV             = "/"
 POT             = "^"
+IGUAL           = "="
+DIF             = "!="
+MAQ             = ">"
+MEQ             = "<"
+MAIGQ           = ">="
+MEIGQ           = "<="
+AND             = "&&"
+OR              = "||"
+NOT             = "!"
 PAR_IZQ         = "("
 PAR_DER         = ")"
 
@@ -45,6 +54,15 @@ ENTER   = [\ \n]
 <YYINITIAL> {POT}	    { return new Symbol(sym.POT, yyline, yycolumn, null); }
 <YYINITIAL> {PAR_IZQ}	    { return new Symbol(sym.PAR_IZQ, yyline, yycolumn, null); }
 <YYINITIAL> {PAR_DER}	    { return new Symbol(sym.PAR_DER, yyline, yycolumn, null); }
+<YYINITIAL> {IGUAL}	    { return new Symbol(sym.IGUAL, yyline, yycolumn, null); }
+<YYINITIAL> {DIF}	    { return new Symbol(sym.DIF, yyline, yycolumn, null); }
+<YYINITIAL> {MAQ}	    { return new Symbol(sym.MAQ, yyline, yycolumn, null); }
+<YYINITIAL> {MEQ}	    { return new Symbol(sym.MEQ, yyline, yycolumn, null); }
+<YYINITIAL> {MAIGQ}	    { return new Symbol(sym.MAIGQ, yyline, yycolumn, null); }
+<YYINITIAL> {MEIGQ}	    { return new Symbol(sym.MEIGQ, yyline, yycolumn, null); }
+<YYINITIAL> {AND}	    { return new Symbol(sym.AND, yyline, yycolumn, null); }
+<YYINITIAL> {OR}	    { return new Symbol(sym.OR, yyline, yycolumn, null); }
+<YYINITIAL> {NOT}	    { return new Symbol(sym.NOT, yyline, yycolumn, null); }
 
 <YYINITIAL> {SPACE}     { /*Espacios en blanco, ignorados*/ }
 <YYINITIAL> {ENTER}     { /*Saltos de linea, ignorados*/}
