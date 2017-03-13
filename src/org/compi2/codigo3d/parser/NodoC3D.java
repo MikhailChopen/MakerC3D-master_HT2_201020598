@@ -8,13 +8,18 @@ package org.compi2.codigo3d.parser;
  */
 public class NodoC3D {
     private String cad;
-
-    public NodoC3D(String cad) {
+    private int L;
+    public NodoC3D(String cad, int l) {
         this.cad = cad;
+        this.L = l;
     }
-    
+     
     public String getCad(){
         return cad;
     }
-        
+    
+    public int getNum(){
+        return L;
+    }
+
 }
